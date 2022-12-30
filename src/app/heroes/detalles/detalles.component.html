@@ -1,0 +1,49 @@
+<div class="container py-4">
+
+  <div class="col-md-6 offset-md-3">
+    <h2>Detalles</h2>
+    <hr>
+  </div>
+
+
+  <div class="row align-items-md-stretch mb-4" >
+
+    <div class="col-md-4 p-4">
+      <div class="text-bg-dark rounded-3">
+        <img class="h-100 rounded-3" src="{{heroe.thumbnail?.path}}.{{heroe.thumbnail?.extension}}" alt="">
+      </div>
+    </div>
+
+    <div class="col-md-8 p-4">
+      <div class="h-100 p-5 text-bg-light rounded-3">
+        <h2>{{heroe.name}}</h2>
+        <p *ngIf="!heroe.description"><s>Este personaje no posee descripcion</s></p>
+        <p *ngIf="heroe.description">{{heroe.description}}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="album rounded py-5 bg-light">
+    
+    <div class="col-md-6 offset-md-3">
+      <h5>Series Relacionadas con: <strong>{{heroe.name}}</strong></h5>
+      <hr>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div *ngFor="let serie of series" class="col-md-4 p-4">
+        <div class="text-bg-dark rounded-3">
+
+          <div class="card text-bg-dark">
+            <img src="{{serie.thumbnail?.path}}.{{serie.thumbnail?.extension}}" class="card-img rounded" alt="...">
+            <div class="card-img-overlay">
+              <p class="card-text float-end"><small><mark class="text-bg-light rounded">{{serie.title}}</mark></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
