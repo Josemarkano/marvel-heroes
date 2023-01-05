@@ -51,6 +51,9 @@ export class DetallesComponent implements OnInit {
   
    );
 
+   console.log(this.activatedRoute.snapshot.data);
+   
+
   }
 
 }

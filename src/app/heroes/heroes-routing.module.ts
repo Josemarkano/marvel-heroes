@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListadoComponent } from './listado/listado.component';
 import { DetallesComponent } from './detalles/detalles.component';
+import { DetallesResolver } from '../resolvers/detalles.resolver';
+
 
 const routes: Routes = [
   {
@@ -13,7 +15,8 @@ const routes: Routes = [
       },
       { 
         path: 'detalles/:id',
-        component: DetallesComponent
+        component: DetallesComponent,
+        resolve: { detalles: DetallesResolver }
       },
       {
         path: '**',
