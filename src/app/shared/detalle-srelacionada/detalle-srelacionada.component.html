@@ -1,0 +1,22 @@
+<div class="album rounded py-5 bg-light">
+    
+    <div class="col-md-6 offset-md-3">
+      <h5>Series Relacionadas con: <strong>{{heroe.name}}</strong></h5>
+      <hr>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div *ngFor="let serie of series" class="col-md-4 p-4">
+        <div class="text-bg-dark rounded-3">
+
+          <div class="card text-bg-dark">
+            <img src="{{serie.thumbnail?.path}}.{{serie.thumbnail?.extension}}" class="card-img rounded" alt="...">
+            <div class="card-img-overlay">
+              <p class="card-text float-end"><small><mark class="text-bg-light rounded">{{serie.title}}</mark></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>

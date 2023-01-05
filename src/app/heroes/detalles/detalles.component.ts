@@ -8,14 +8,7 @@ import { SerieR } from '../interfaces/serierelacionada.interface';
 @Component({
   selector: 'app-detalles',
   templateUrl: './detalles.component.html',
-  styles: [`
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  
-`]
+ 
 })
 export class DetallesComponent implements OnInit {
 

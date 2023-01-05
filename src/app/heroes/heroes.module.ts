@@ -8,6 +8,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { ListadoComponent } from './listado/listado.component';
 import { DetallesComponent } from './detalles/detalles.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DetallesComponent } from './detalles/detalles.component';
     CommonModule,
     HeroesRoutingModule,
     CarouselModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class HeroesModule { }
