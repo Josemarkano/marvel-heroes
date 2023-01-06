@@ -34,8 +34,7 @@ export class HeroesService {
   }
 
   getSerieRelacionada (id: string): Observable<SerieRela> {
-    return this.http.get<SerieRela>(`${this.link}characters/${id}/series?${this.apiKey}`)
+    return this.http.get<SerieRela>(`${this.link}characters/${id}/series?${this.apiKey}`);
   }
-
 
 }

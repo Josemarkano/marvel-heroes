@@ -38,13 +38,13 @@ export class DetallesComponent implements OnInit {
     this.activatedRoute.params.subscribe( ({ id }) => {
 
       this.heroesService.getPorId(id).subscribe( (heroe) => {this.heroe = heroe.data.results[0]});
-      this.heroesService.getSerieRelacionada(id).subscribe( (series) => {this.series = series.data.results.slice(0,3)});
+      this.heroesService.getSerieRelacionada(id).subscribe( (series) => {this.series = series.data.results.slice(0,3); console.log(series);
+      });
 
     }
   
    );
 
-   console.log(this.activatedRoute.snapshot.data);
    
 
   }

@@ -11,9 +11,11 @@
 
           <div class="card text-bg-dark">
             <img src="{{serie.thumbnail?.path}}.{{serie.thumbnail?.extension}}" class="card-img rounded" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-text float-end"><small><mark class="text-bg-light rounded">{{serie.title}}</mark></small></p>
-            </div>
+            <a [href]="serie.urls![0].url" target="_blank" rel="noopener noreferrer">
+              <div class="card-img-overlay">
+                <p class="card-text float-end"><small><mark class="text-bg-light rounded">{{serie.title}}</mark></small></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
