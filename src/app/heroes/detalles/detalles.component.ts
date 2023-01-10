@@ -44,6 +44,8 @@ export class DetallesComponent implements OnInit {
     }
   
    );
+// hola desd comentario
+console.log('hola mundoososo');
 
    
 
