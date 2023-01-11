@@ -80,3 +80,6 @@ export class ListadoComponent implements OnInit {
   }
 
 }
+
+
+console.log('hola prueba');
